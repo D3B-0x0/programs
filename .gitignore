@@ -1,0 +1,7 @@
+Python-lang/
+Rust-lang/
+.vscode/
+**/*.out
+**/*.o
+**/*.exe
+obj/
