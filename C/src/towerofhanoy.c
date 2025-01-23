@@ -1,5 +1,4 @@
 #include<stdio.h>
-//#include<math.h>
 void TOH(int n,char a,char b,char c);
 int main()
 {
