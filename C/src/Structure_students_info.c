@@ -4,16 +4,21 @@ typedef struct Structure_students{
   int marks;
 }stu_info;
 void main(){
-  stu_info x[4];
-  int i;
-  for(i=0;i<4;i++)
+  stu_info x[2];
+  int i,w,q;
+  for(i=0;i<2;i++)
   {
     printf("Enter the details of the %d student\n",i+1);
     scanf("%s%s%s%d",x[i].name,x[i].dept,x[i].sub,&x[i].marks);
   }
-  for(i=0;i<4;i++)
-  {
-    printf("\n Value of %d student name %s Department %s subject %s Marks %d",i+1,x[i].name,x[i].dept,x[i].sub,x[i].marks);
-    printf("\n");
+  w=x[0].marks;
+  q=0;
+  for(i=1;i<2;i++){
+    if(w<x[i].marks){
+      w=x[i].marks;
+      q=i;
+    }
   }
+  printf(x[q].name);
+  printf("\n");
 }

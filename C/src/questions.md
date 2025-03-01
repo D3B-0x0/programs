@@ -1,55 +1,30 @@
-Basic Syntax and Data Types
+🔥 Must-Know Priority Topics 🔥
+1️⃣ Conditional Statements (if-else, switch-case)
 
-    Write a C program to print "Hello, World!" to the console.
-    What is the difference between int, float, and char data types? Give an example of each.
-    Write a program to take two integers as input and print their sum.
-    What will be the output of the following code snippet?
+✅ Find the largest of three numbers
+✅ Check if a number is positive, negative, or zero
+✅ Check if a number is even or odd
+✅ Check if a year is a leap year
+✅ Use switch-case for a basic calculator ( + , - , * , / )
+2️⃣ Loops (for, while, do-while) & Patterns
 
-    int x = 10, y = 20;
-    printf("%d %d", x, y);
+✅ Find sum of digits of a number
+✅ Find reverse of a number (e.g., 123 → 321)
+✅ Check if a number is palindrome (121 → Yes, 123 → No)
+✅ Find factorial of a number using recursion
+✅ Find GCD of two numbers using recursion
+✅ Print first N Fibonacci numbers
+3️⃣ Arrays & Strings
 
-Variables and Input/Output
+✅ Find the largest & smallest element in an array
+✅ Reverse an array using pointers
+✅ Check if a string is a palindrome (madam → Yes, hello → No)
+4️⃣ Pointers & Functions
 
-    Write a program to calculate the area of a rectangle. Take length and breadth as inputs.
-    What does the %d format specifier represent in printf and scanf?
-    Write a program to take a character as input and print its ASCII value.
+✅ Swap two numbers using call by reference
+✅ Multiply two matrices using pointers
+✅ Copy one string to another without strcpy()
+5️⃣ File Handling (Important for Practical Exams)
 
-Operators
-
-    Write a program to demonstrate the use of arithmetic operators (+, -, *, /, %).
-    What will be the output of this code?
-
-    int a = 5, b = 2;
-    printf("%d", a / b);
-
-    Write a program to find the remainder when one number is divided by another (use % operator).
-
-Conditional Statements
-
-    Write a program to check if a number is positive, negative, or zero using if-else.
-    Create a program that checks if an integer is even or odd.
-    What is the output of the following code?
-
-    int x = 15;
-    if (x > 10)
-        printf("Greater than 10");
-    printf("End of Program");
-
-    Write a program to find the largest of two numbers entered by the user.
-
-Loops
-
-    Write a program to print numbers from 1 to 10 using a for loop.
-    Create a program that calculates the sum of the first n natural numbers (where n is entered by the user).
-    Write a program to display the multiplication table of a number using a while loop.
-    Write a program to print all even numbers between 1 and 50 using a for loop.
-    Create a program that calculates the factorial of a number using a while loop.
-    Write a program to reverse a given number using a while loop.
-
-Arrays (Introductory)
-
-    Write a program to take 5 integers as input and display them using an array.
-    What is the difference between an array and a normal variable?
-    Write a program to find the largest element in an array of 10 integers.
-
-
+✅ Write a C program to copy contents of one file to another
+✅ Count number of words & characters in a file

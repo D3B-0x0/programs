@@ -11,15 +11,12 @@ int main(){
   printf("For Perimeter Enter 2 \n");
   scanf("%d",&x);
 
-
-
-
   switch (x) {
     case 1:
-      printf("Area of Rectangel is= %d",l*b);
+      printf("Area of rectangle is= %d",l*b);
       break;
-      case 2:
-      printf("Perimeter of Rectangel is= %d",2*(l+b));
+    case 2:
+      printf("Perimeter of rectangle is= %d",2*(l+b));
       break;
 
     default:
