@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <cs50.h>
 
 // Function to count the number of digits
 int countDigits(int num) {
@@ -36,4 +37,3 @@ int main() {
 
     return 0;
 }
-
