@@ -1,5 +1,3 @@
-Python-lang/
-Rust-lang/
 .vscode/
 **/*.out
 **/*.o
