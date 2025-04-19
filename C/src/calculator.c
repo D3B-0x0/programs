@@ -30,6 +30,6 @@ int main() {
   } else {
     printf("Invalid operator. Please enter a valid operator (+, -, *, /).\n");
   }
-
+  printf("Bye have a great day\n");
   return 0;
 }
