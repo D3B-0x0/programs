@@ -1,6 +1,6 @@
 #include <stdio.h>
-
 #define MAX 10
+
 int F = -1, R = -1;
 int Q[MAX];
 void Enque() {
@@ -51,17 +51,17 @@ int main() {
       break;
     }
     switch (x) {
-    case 1:
-      Enque();
-      break;
-    case 2:
-      Deque();
-      break;
-    case 3:
-      display();
-      break;
-    default:
-      printf("\n Wrong entry Try again ");
+      case 1:
+        Enque();
+        break;
+      case 2:
+        Deque();
+        break;
+      case 3:
+        display();
+        break;
+      default:
+        printf("\n Wrong entry Try again ");
     }
   }
   return 0;
