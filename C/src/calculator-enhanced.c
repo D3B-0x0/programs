@@ -1,9 +1,6 @@
 #include <stdio.h>
-#define MAX = 32
 
-int main() 
-{
-    printf(" \n");
+int main() {
 
-    return 0;
+  int addition(int x,int y,)
 }
