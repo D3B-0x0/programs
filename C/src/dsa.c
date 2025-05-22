@@ -37,7 +37,8 @@ void create() {
 
     printf("Do you want to continue (1 for Yes / 0 for No): ");
     scanf("%d", &x);
-    if (x == 0) break;
+    if (x == 0)
+      break;
   }
 }
 
