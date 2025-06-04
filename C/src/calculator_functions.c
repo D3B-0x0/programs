@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /* prototyping functions  :D */
 // addition block
 double add(double inp_1, double inp_2) {
@@ -56,7 +55,7 @@ int main() {
     if (input_2 == 0) {
       printf("Error: Division by zero is not allowed.\n");
     } else {
-      printf("The quotient of two numbers is %f \n",divide(input_1,input_2));
+      printf("The quotient of two numbers is %lf \n",divide(input_1,input_2));
     }
   } else {
     printf("Invalid operator. Please enter a valid operator (+, -, *, /).\n");
