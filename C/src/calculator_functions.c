@@ -3,31 +3,23 @@
 /* prototyping functions  :D */
 // addition block
 double add(double inp_1, double inp_2) {
-  double sum;
-  sum = inp_1+inp_2;
-  return sum;
+  return inp_1+inp_2;
 }
 
 // subtraction block
 double sub(double inp_1, double inp_2) {
-  double sub_out;
-  sub_out = inp_1-inp_2;
-  return sub_out;
+  return inp_1-inp_2;
 }
 
 // multiply block
 double multiply(double inp_1, double inp_2) {
-  double product;
-  product = inp_1*inp_2;
-  return product;
+  return inp_1*inp_2;
 }
 
 
 // division block
 double divide(double inp_1, double inp_2) {
-  double divide_out;
-  divide_out = inp_1/inp_2;
-  return divide_out;
+  return inp_1/inp_2;
 }
 
 // Main block
@@ -44,7 +36,7 @@ int main() {
   printf("\nEnter operation to perform (+,-,*,/) -> ");
   scanf(" %c",&operation);
 
-  //condition checking 
+  //condition checking
   if (operation == '+') {
     printf("The sum of two numbers is %lf \n",add(input_1,input_2));
   } else if (operation == '-') {
