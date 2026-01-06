@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deb | Open Source & Cloud Enthusiast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ctp-mocha-base: #1e1e2e;
+            --ctp-mocha-mantle: #181825;
+            --ctp-mocha-crust: #11111b;
+            --ctp-mocha-surface0: #313244;
+            --ctp-mocha-surface1: #45475a;
+            --ctp-mocha-surface2: #585b70;
+            --ctp-mocha-text: #cdd6f4;
+            --ctp-mocha-subtext0: #a6adc8;
+            --ctp-mocha-subtext1: #bac2de;
+            --ctp-mocha-blue: #89b4fa;
+            --ctp-mocha-lavender: #b4befe;
+            --ctp-mocha-sapphire: #74c7ec;
+            --ctp-mocha-teal: #94e2d5;
+            --ctp-mocha-green: #a6e3a1;
+            --ctp-mocha-mauve: #cba6f7;
+            --ctp-mocha-pink: #f5c2e7;
+            --ctp-mocha-red: #f38ba8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--ctp-mocha-base);
+            color: var(--ctp-mocha-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        code, .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--ctp-mocha-crust) 0%, var(--ctp-mocha-mantle) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--ctp-mocha-blue) 0%, transparent 70%);
+            opacity: 0.1;
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--ctp-mocha-blue), var(--ctp-mocha-lavender), var(--ctp-mocha-mauve));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            color: var(--ctp-mocha-subtext0);
+            margin-bottom: 2rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: var(--ctp-mocha-subtext1);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Cards */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--ctp-mocha-lavender);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--ctp-mocha-surface0);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--ctp-mocha-surface1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--ctp-mocha-blue), var(--ctp-mocha-sapphire));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--ctp-mocha-blue);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card h3 {
+            color: var(--ctp-mocha-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-icon {
+            font-size: 1.5rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 0.5rem 0;
+            color: var(--ctp-mocha-subtext1);
+            border-bottom: 1px solid var(--ctp-mocha-surface1);
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li::before {
+            content: '→';
+            color: var(--ctp-mocha-sapphire);
+            margin-right: 0.5rem;
+        }
+
+        /* Tech Stack Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tech-item {
+            background: var(--ctp-mocha-surface0);
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--ctp-mocha-surface1);
+            transition: all 0.3s;
+        }
+
+        .tech-item:hover {
+            background: var(--ctp-mocha-surface1);
+            border-color: var(--ctp-mocha-blue);
+            transform: scale(1.05);
+        }
+
+        .tech-item code {
+            color: var(--ctp-mocha-teal);
+            font-size: 0.9rem;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--ctp-mocha-surface0);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--ctp-mocha-green);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--ctp-mocha-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ctp-mocha-mantle);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--ctp-mocha-surface0);
+        }
+
+        footer p {
+            color: var(--ctp-mocha-subtext0);
+        }
+
+        footer a {
+            color: var(--ctp-mocha-blue);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--ctp-mocha-lavender);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Links */
+        a {
+            color: var(--ctp-mocha-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: var(--ctp-mocha-mauve);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>D3B-0x0</h1>
+            <p class="subtitle mono">Open Source & Linux Enthusiast</p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Currently tinkering with Proxmox & networking</span>
+            </div>
+            <p class="tagline">
+                A hands-on tinkerer with old-school discipline — combining hacker mindset, sysadmin precision, and designer aesthetics. 
+                Building elegant systems one config at a time.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Identity -->
+    <section class="section">
+        <h2 class="section-title">Core Identity</h2>
+        <div class="cards">
+            <div class="card">
+                <h3><span class="card-icon">🐧</span> Philosophy</h3>
+                <ul>
+                    <li>5-6 years deep in Linux</li>
+                    <li>Freedom, minimalism, customization</li>
+                    <li>Learning through doing, breaking, fixing</li>
+                    <li>Command-line native mindset</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="card-icon">⚙️</span> Approach</h3>
+                <ul>
+                    <li>Depth over trends</li>
+                    <li>Traditional fundamentals first</li>
+                    <li>No bloat, no fluff</li>
+                    <li>Everything must be deliberate</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="card-icon">🎨</span> Aesthetic</h3>
+                <ul>
+                    <li>Catppuccin Mocha / Macchiato</li>
+                    <li>Minimalism meets elegance</li>
+                    <li>Clean typography, soft contrasts</li>
+                    <li>Functional yet stylish</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Interests -->
+    <section class="section">
+        <h2 class="section-title">Technical Interests</h2>
+        <div class="cards">
+            <div class="card">
+                <h3><span class="card-icon">🌐</span> Networking & Self-Hosting</h3>
+                <ul>
+                    <li>Homelabbing obsession</li>
+                    <li>Virtualization & routing</li>
+                    <li>Proxmox, Tailscale, VPNs</li>
+                    <li>VLANs & firewall configs</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="card-icon">🖥️</span> Server Administration</h3>
+                <ul>
+                    <li>Efficient, secure setups</li>
+                    <li>Self-contained networks</li>
+                    <li>Docker containers & LXCs</li>
+                    <li>SSH, GPG, OpenWRT mastery</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="card-icon">🔧</span> Hardware Tinkering</h3>
+                <ul>
+                    <li>Taking machines apart</li>
+                    <li>Optimizing configs</li>
+                    <li>Repurposing old hardware</li>
+                    <li>Running servers on laptops</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Stack -->
+    <section class="section">
+        <h2 class="section-title">Current Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item"><code>CachyOS</code></div>
+            <div class="tech-item"><code>Proxmox</code></div>
+            <div class="tech-item"><code>AdGuard</code></div>
+            <div class="tech-item"><code>Vaultwarden</code></div>
+            <div class="tech-item"><code>Neovim</code></div>
+            <div class="tech-item"><code>Zed</code></div>
+            <div class="tech-item"><code>C / C++</code></div>
+            <div class="tech-item"><code>Python</code></div>
+            <div class="tech-item"><code>Rust</code></div>
+            <div class="tech-item"><code>Bash</code></div>
+            <div class="tech-item"><code>Docker</code></div>
+            <div class="tech-item"><code>Wireshark</code></div>
+            <div class="tech-item"><code>Nmap</code></div>
+            <div class="tech-item"><code>Git</code></div>
+        </div>
+    </section>
+
+    <!-- Homelab Setup -->
+    <section class="section">
+        <h2 class="section-title">Homelab Setup</h2>
+        <div class="cards">
+            <div class="card">
+                <h3><span class="card-icon">📦</span> Infrastructure</h3>
+                <ul>
+                    <li>Proxmox hypervisor</li>
+                    <li>Multiple LXC containers</li>
+                    <li>AdGuard for DNS filtering</li>
+                    <li>Uptime Kuma monitoring</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="card-icon">🔐</span> Services</h3>
+                <ul>
+                    <li>Vaultwarden password manager</li>
+                    <li>code-server for development</li>
+                    <li>Glance dashboard</li>
+                    <li>Self-hosted Git (planned)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3><span class="card-icon">🎯</span> Goals</h3>
+                <ul>
+                    <li>Master networking fundamentals</li>
+                    <li>Build career in IT infrastructure</li>
+                    <li>Complete BCA (2nd year)</li>
+                    <li>C → DSA → C++ → Networking</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mono">D3B-0x0 © 2025 | Built with <span class="highlight">minimalism</span> in mind</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="https://github.com/D3B-0x0" target="_blank">GitHub</a>
+        </p>
+    </footer>
+</body>
+</html>

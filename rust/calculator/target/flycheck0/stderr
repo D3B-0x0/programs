@@ -1,0 +1,50 @@
+   0.029504641s  INFO prepare_target{force=false package_id=calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator) target="calculator"}: cargo::core::compiler::fingerprint: fingerprint error for calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator)/Check { test: false }/TargetInner { name: "calculator", doc: true, ..: with_path("/home/ghost/Documents/programs/rust/calculator/src/main.rs", Edition2024) }
+   0.029539773s  INFO prepare_target{force=false package_id=calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator) target="calculator"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/ghost/Documents/programs/rust/calculator/target/debug/.fingerprint/calculator-b95cd12d00b39dcf/bin-calculator`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: __libc_start_main
+  16: <unknown>
+   0.030557164s  INFO prepare_target{force=false package_id=calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator) target="calculator"}: cargo::core::compiler::fingerprint: fingerprint error for calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator)/Check { test: true }/TargetInner { name: "calculator", doc: true, ..: with_path("/home/ghost/Documents/programs/rust/calculator/src/main.rs", Edition2024) }
+   0.030575972s  INFO prepare_target{force=false package_id=calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator) target="calculator"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/ghost/Documents/programs/rust/calculator/target/debug/.fingerprint/calculator-016f51d44c291909/test-bin-calculator`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: __libc_start_main
+  16: <unknown>
+    Checking calculator v0.1.0 (/home/ghost/Documents/programs/rust/calculator)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.17s
