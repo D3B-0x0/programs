@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Conversions - Reference Sheet</title>
+    <style>
+        @page {
+            margin: 2cm;
+        }
+        body {
+            font-family: 'Google Sans', serif;
+            line-height: 1.6;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            color: #000;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+            text-decoration: underline;
+        }
+        .subtitle {
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        h2 {
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            margin-top: 25px;
+            font-size: 20px;
+            border-left: 5px solid #666;
+        }
+        h3 {
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .note {
+            background: #ffffcc;
+            border-left: 4px solid #ffcc00;
+            padding: 12px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .important {
+            background: #ffe6e6;
+            border: 2px solid #cc0000;
+            padding: 12px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .steps {
+            background: #f0f0f0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .step {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #ddd;
+            font-weight: bold;
+        }
+        .example {
+            background: #e6f3ff;
+            border: 2px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .example-title {
+            font-weight: bold;
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .formula {
+            background: #fff;
+            border: 2px dashed #666;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        .practice {
+            background: #f9f9f9;
+            border: 3px solid #009900;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .practice-title {
+            font-weight: bold;
+            color: #009900;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        .question {
+            margin: 8px 0;
+            padding-left: 10px;
+        }
+        .conversion-table {
+            margin: 20px 0;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid #ddd;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px solid #000;
+            font-size: 12px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📚 NUMBER SYSTEM CONVERSIONS 📚</h1>
+        <div class="subtitle">A Complete Reference Guide with Step-by-Step Methods</div>
+        <div class="subtitle" style="margin-top: 5px;">Binary • Octal • Decimal • Hexadecimal</div>
+    </div>
+
+    <div class="important">
+        ⭐ REMEMBER THE BASES: Binary (Base-2), Octal (Base-8), Decimal (Base-10), Hexadecimal (Base-16)
+    </div>
+
+    <h2>📋 Quick Reference Table</h2>
+    <table class="conversion-table">
+        <tr>
+            <th>Decimal</th>
+            <th>Binary</th>
+            <th>Octal</th>
+            <th>Hexadecimal</th>
+        </tr>
+        <tr><td>0</td><td>0000</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>0001</td><td>1</td><td>1</td></tr>
+        <tr><td>2</td><td>0010</td><td>2</td><td>2</td></tr>
+        <tr><td>3</td><td>0011</td><td>3</td><td>3</td></tr>
+        <tr><td>4</td><td>0100</td><td>4</td><td>4</td></tr>
+        <tr><td>5</td><td>0101</td><td>5</td><td>5</td></tr>
+        <tr><td>6</td><td>0110</td><td>6</td><td>6</td></tr>
+        <tr><td>7</td><td>0111</td><td>7</td><td>7</td></tr>
+        <tr><td>8</td><td>1000</td><td>10</td><td>8</td></tr>
+        <tr><td>9</td><td>1001</td><td>11</td><td>9</td></tr>
+        <tr><td>10</td><td>1010</td><td>12</td><td>A</td></tr>
+        <tr><td>11</td><td>1011</td><td>13</td><td>B</td></tr>
+        <tr><td>12</td><td>1100</td><td>14</td><td>C</td></tr>
+        <tr><td>13</td><td>1101</td><td>15</td><td>D</td></tr>
+        <tr><td>14</td><td>1110</td><td>16</td><td>E</td></tr>
+        <tr><td>15</td><td>1111</td><td>17</td><td>F</td></tr>
+    </table>
+
+
+    <h2>PART 1: DECIMAL CONVERSIONS</h2>
+
+    <h3>1.1 Decimal to Binary Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Divide the decimal number by 2 repeatedly. Write remainders from bottom to top.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (25)₁₀ to Binary</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> 25 ÷ 2 = 12, Remainder = <strong>1</strong></div>
+            <div class="step"><strong>Step 2:</strong> 12 ÷ 2 = 6, Remainder = <strong>0</strong></div>
+            <div class="step"><strong>Step 3:</strong> 6 ÷ 2 = 3, Remainder = <strong>0</strong></div>
+            <div class="step"><strong>Step 4:</strong> 3 ÷ 2 = 1, Remainder = <strong>1</strong></div>
+            <div class="step"><strong>Step 5:</strong> 1 ÷ 2 = 0, Remainder = <strong>1</strong></div>
+            <div class="step" style="margin-top: 15px;"><strong>Write remainders from bottom to top:</strong> <code>11001</code></div>
+            <div class="formula">Answer: (25)₁₀ = (11001)₂</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (45)₁₀ to Binary</div>
+        <div class="steps">
+            <div class="step">45 ÷ 2 = 22, R = <strong>1</strong></div>
+            <div class="step">22 ÷ 2 = 11, R = <strong>0</strong></div>
+            <div class="step">11 ÷ 2 = 5, R = <strong>1</strong></div>
+            <div class="step">5 ÷ 2 = 2, R = <strong>1</strong></div>
+            <div class="step">2 ÷ 2 = 1, R = <strong>0</strong></div>
+            <div class="step">1 ÷ 2 = 0, R = <strong>1</strong></div>
+            <div class="formula">Answer: (45)₁₀ = (101101)₂</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Decimal to Binary</div>
+        <div class="question">Q1. Convert (18)₁₀ to Binary</div>
+        <div class="question">Q2. Convert (31)₁₀ to Binary</div>
+        <div class="question">Q3. Convert (64)₁₀ to Binary</div>
+        <div class="question">Q4. Convert (100)₁₀ to Binary</div>
+        <div class="question">Q5. Convert (127)₁₀ to Binary</div>
+    </div>
+
+    <h3>1.2 Decimal to Octal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Divide the decimal number by 8 repeatedly. Write remainders from bottom to top.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (156)₁₀ to Octal</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> 156 ÷ 8 = 19, Remainder = <strong>4</strong></div>
+            <div class="step"><strong>Step 2:</strong> 19 ÷ 8 = 2, Remainder = <strong>3</strong></div>
+            <div class="step"><strong>Step 3:</strong> 2 ÷ 8 = 0, Remainder = <strong>2</strong></div>
+            <div class="formula">Answer: (156)₁₀ = (234)₈</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (89)₁₀ to Octal</div>
+        <div class="steps">
+            <div class="step">89 ÷ 8 = 11, R = <strong>1</strong></div>
+            <div class="step">11 ÷ 8 = 1, R = <strong>3</strong></div>
+            <div class="step">1 ÷ 8 = 0, R = <strong>1</strong></div>
+            <div class="formula">Answer: (89)₁₀ = (131)₈</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Decimal to Octal</div>
+        <div class="question">Q1. Convert (75)₁₀ to Octal</div>
+        <div class="question">Q2. Convert (128)₁₀ to Octal</div>
+        <div class="question">Q3. Convert (255)₁₀ to Octal</div>
+        <div class="question">Q4. Convert (512)₁₀ to Octal</div>
+        <div class="question">Q5. Convert (1000)₁₀ to Octal</div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h3>1.3 Decimal to Hexadecimal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Divide the decimal number by 16 repeatedly. Write remainders from bottom to top.<br>
+        <strong>Important:</strong> Use A=10, B=11, C=12, D=13, E=14, F=15
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (254)₁₀ to Hexadecimal</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> 254 ÷ 16 = 15, Remainder = <strong>14</strong> = <strong>E</strong></div>
+            <div class="step"><strong>Step 2:</strong> 15 ÷ 16 = 0, Remainder = <strong>15</strong> = <strong>F</strong></div>
+            <div class="formula">Answer: (254)₁₀ = (FE)₁₆</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (2748)₁₀ to Hexadecimal</div>
+        <div class="steps">
+            <div class="step">2748 ÷ 16 = 171, R = <strong>12</strong> = <strong>C</strong></div>
+            <div class="step">171 ÷ 16 = 10, R = <strong>11</strong> = <strong>B</strong></div>
+            <div class="step">10 ÷ 16 = 0, R = <strong>10</strong> = <strong>A</strong></div>
+            <div class="formula">Answer: (2748)₁₀ = (ABC)₁₆</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Decimal to Hexadecimal</div>
+        <div class="question">Q1. Convert (165)₁₀ to Hexadecimal</div>
+        <div class="question">Q2. Convert (255)₁₀ to Hexadecimal</div>
+        <div class="question">Q3. Convert (4095)₁₀ to Hexadecimal</div>
+        <div class="question">Q4. Convert (1000)₁₀ to Hexadecimal</div>
+        <div class="question">Q5. Convert (512)₁₀ to Hexadecimal</div>
+    </div>
+
+    <h2>PART 2: BINARY CONVERSIONS</h2>
+
+    <h3>2.1 Binary to Decimal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Multiply each digit by 2 raised to its position power (from right, starting at 0). Add all products.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (1101)₂ to Decimal</div>
+        <div class="steps">
+            <div class="step"><strong>Position:</strong> 3 2 1 0 (from right to left)</div>
+            <div class="step"><strong>Digit:</strong> 1 1 0 1</div>
+            <div class="step" style="margin-top: 10px;"><strong>Calculation:</strong></div>
+            <div class="step">= 1×2³ + 1×2² + 0×2¹ + 1×2⁰</div>
+            <div class="step">= 1×8 + 1×4 + 0×2 + 1×1</div>
+            <div class="step">= 8 + 4 + 0 + 1</div>
+            <div class="step">= 13</div>
+            <div class="formula">Answer: (1101)₂ = (13)₁₀</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (101101)₂ to Decimal</div>
+        <div class="steps">
+            <div class="step">= 1×2⁵ + 0×2⁴ + 1×2³ + 1×2² + 0×2¹ + 1×2⁰</div>
+            <div class="step">= 1×32 + 0×16 + 1×8 + 1×4 + 0×2 + 1×1</div>
+            <div class="step">= 32 + 0 + 8 + 4 + 0 + 1</div>
+            <div class="step">= 45</div>
+            <div class="formula">Answer: (101101)₂ = (45)₁₀</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Binary to Decimal</div>
+        <div class="question">Q1. Convert (1010)₂ to Decimal</div>
+        <div class="question">Q2. Convert (11111)₂ to Decimal</div>
+        <div class="question">Q3. Convert (100101)₂ to Decimal</div>
+        <div class="question">Q4. Convert (1111111)₂ to Decimal</div>
+        <div class="question">Q5. Convert (10101010)₂ to Decimal</div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h3>2.2 Binary to Octal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Group binary digits in sets of 3 (from right to left). Convert each group to octal.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (110101)₂ to Octal</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> Group in 3s from right: <code>110 | 101</code></div>
+            <div class="step"><strong>Step 2:</strong> Convert each group:</div>
+            <div class="step">110 = 1×2² + 1×2¹ + 0×2⁰ = 4 + 2 + 0 = <strong>6</strong></div>
+            <div class="step">101 = 1×2² + 0×2¹ + 1×2⁰ = 4 + 0 + 1 = <strong>5</strong></div>
+            <div class="formula">Answer: (110101)₂ = (65)₈</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (1011101)₂ to Octal</div>
+        <div class="steps">
+            <div class="step">Group: <code>001 | 011 | 101</code> (add 0s on left if needed)</div>
+            <div class="step">001 = <strong>1</strong></div>
+            <div class="step">011 = <strong>3</strong></div>
+            <div class="step">101 = <strong>5</strong></div>
+            <div class="formula">Answer: (1011101)₂ = (135)₈</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Binary to Octal</div>
+        <div class="question">Q1. Convert (111000)₂ to Octal</div>
+        <div class="question">Q2. Convert (10110110)₂ to Octal</div>
+        <div class="question">Q3. Convert (1111111)₂ to Octal</div>
+        <div class="question">Q4. Convert (101010101)₂ to Octal</div>
+        <div class="question">Q5. Convert (11001100)₂ to Octal</div>
+    </div>
+
+    <h3>2.3 Binary to Hexadecimal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Group binary digits in sets of 4 (from right to left). Convert each group to hexadecimal.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (11011010)₂ to Hexadecimal</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> Group in 4s from right: <code>1101 | 1010</code></div>
+            <div class="step"><strong>Step 2:</strong> Convert each group:</div>
+            <div class="step">1101 = 8 + 4 + 0 + 1 = 13 = <strong>D</strong></div>
+            <div class="step">1010 = 8 + 0 + 2 + 0 = 10 = <strong>A</strong></div>
+            <div class="formula">Answer: (11011010)₂ = (DA)₁₆</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (101111101)₂ to Hexadecimal</div>
+        <div class="steps">
+            <div class="step">Group: <code>0001 | 0111 | 1101</code></div>
+            <div class="step">0001 = <strong>1</strong></div>
+            <div class="step">0111 = <strong>7</strong></div>
+            <div class="step">1101 = <strong>D</strong></div>
+            <div class="formula">Answer: (101111101)₂ = (17D)₁₆</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Binary to Hexadecimal</div>
+        <div class="question">Q1. Convert (11111111)₂ to Hexadecimal</div>
+        <div class="question">Q2. Convert (10101010)₂ to Hexadecimal</div>
+        <div class="question">Q3. Convert (11001100)₂ to Hexadecimal</div>
+        <div class="question">Q4. Convert (100111011)₂ to Hexadecimal</div>
+        <div class="question">Q5. Convert (1111000011110000)₂ to Hexadecimal</div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>PART 3: OCTAL CONVERSIONS</h2>
+
+    <h3>3.1 Octal to Decimal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Multiply each digit by 8 raised to its position power (from right, starting at 0). Add all products.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (345)₈ to Decimal</div>
+        <div class="steps">
+            <div class="step"><strong>Position:</strong> 2 1 0</div>
+            <div class="step"><strong>Digit:</strong> 3 4 5</div>
+            <div class="step" style="margin-top: 10px;"><strong>Calculation:</strong></div>
+            <div class="step">= 3×8² + 4×8¹ + 5×8⁰</div>
+            <div class="step">= 3×64 + 4×8 + 5×1</div>
+            <div class="step">= 192 + 32 + 5</div>
+            <div class="step">= 229</div>
+            <div class="formula">Answer: (345)₈ = (229)₁₀</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (762)₈ to Decimal</div>
+        <div class="steps">
+            <div class="step">= 7×8² + 6×8¹ + 2×8⁰</div>
+            <div class="step">= 7×64 + 6×8 + 2×1</div>
+            <div class="step">= 448 + 48 + 2</div>
+            <div class="step">= 498</div>
+            <div class="formula">Answer: (762)₈ = (498)₁₀</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Octal to Decimal</div>
+        <div class="question">Q1. Convert (127)₈ to Decimal</div>
+        <div class="question">Q2. Convert (777)₈ to Decimal</div>
+        <div class="question">Q3. Convert (1234)₈ to Decimal</div>
+        <div class="question">Q4. Convert (456)₈ to Decimal</div>
+        <div class="question">Q5. Convert (7777)₈ to Decimal</div>
+    </div>
+
+    <h3>3.2 Octal to Binary Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Convert each octal digit to its 3-bit binary equivalent.
+    </div>
+
+    <div class="important">
+        Quick Reference: 0→000, 1→001, 2→010, 3→011, 4→100, 5→101, 6→110, 7→111
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (47)₈ to Binary</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> Convert each digit separately:</div>
+            <div class="step">4 = <code>100</code></div>
+            <div class="step">7 = <code>111</code></div>
+            <div class="step"><strong>Step 2:</strong> Combine: <code>100111</code></div>
+            <div class="formula">Answer: (47)₈ = (100111)₂</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (365)₈ to Binary</div>
+        <div class="steps">
+            <div class="step">3 = <code>011</code></div>
+            <div class="step">6 = <code>110</code></div>
+            <div class="step">5 = <code>101</code></div>
+            <div class="step">Combine: <code>011110101</code></div>
+            <div class="formula">Answer: (365)₈ = (011110101)₂</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Octal to Binary</div>
+        <div class="question">Q1. Convert (52)₈ to Binary</div>
+        <div class="question">Q2. Convert (147)₈ to Binary</div>
+        <div class="question">Q3. Convert (777)₈ to Binary</div>
+        <div class="question">Q4. Convert (1234)₈ to Binary</div>
+        <div class="question">Q5. Convert (6543)₈ to Binary</div>
+    </div>
+
+    <h3>3.3 Octal to Hexadecimal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> First convert Octal → Binary, then Binary → Hexadecimal.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (74)₈ to Hexadecimal</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> Octal to Binary:</div>
+            <div class="step">7 = 111, 4 = 100 → <code>111100</code></div>
+            <div class="step"><strong>Step 2:</strong> Binary to Hex (group by 4):</div>
+            <div class="step"><code>0011 | 1100</code></div>
+            <div class="step">0011 = <strong>3</strong>, 1100 = <strong>C</strong></div>
+            <div class="formula">Answer: (74)₈ = (3C)₁₆</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Octal to Hexadecimal</div>
+        <div class="question">Q1. Convert (377)₈ to Hexadecimal</div>
+        <div class="question">Q2. Convert (157)₈ to Hexadecimal</div>
+        <div class="question">Q3. Convert (765)₈ to Hexadecimal</div>
+        <div class="question">Q4. Convert (1234)₈ to Hexadecimal</div>
+        <div class="question">Q5. Convert (7777)₈ to Hexadecimal</div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>PART 4: HEXADECIMAL CONVERSIONS</h2>
+
+    <h3>4.1 Hexadecimal to Decimal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Multiply each digit by 16 raised to its position power. Remember: A=10, B=11, C=12, D=13, E=14, F=15
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (2AF)₁₆ to Decimal</div>
+        <div class="steps">
+            <div class="step"><strong>Position:</strong> 2 1 0</div>
+            <div class="step"><strong>Digit:</strong> 2 A F</div>
+            <div class="step"><strong>Value:</strong> 2 10 15</div>
+            <div class="step" style="margin-top: 10px;"><strong>Calculation:</strong></div>
+            <div class="step">= 2×16² + 10×16¹ + 15×16⁰</div>
+            <div class="step">= 2×256 + 10×16 + 15×1</div>
+            <div class="step">= 512 + 160 + 15</div>
+            <div class="step">= 687</div>
+            <div class="formula">Answer: (2AF)₁₆ = (687)₁₀</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (1BC)₁₆ to Decimal</div>
+        <div class="steps">
+            <div class="step">= 1×16² + 11×16¹ + 12×16⁰</div>
+            <div class="step">= 1×256 + 11×16 + 12×1</div>
+            <div class="step">= 256 + 176 + 12</div>
+            <div class="step">= 444</div>
+            <div class="formula">Answer: (1BC)₁₆ = (444)₁₀</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Hexadecimal to Decimal</div>
+        <div class="question">Q1. Convert (FF)₁₆ to Decimal</div>
+        <div class="question">Q2. Convert (ABC)₁₆ to Decimal</div>
+        <div class="question">Q3. Convert (1A2B)₁₆ to Decimal</div>
+        <div class="question">Q4. Convert (CAFE)₁₆ to Decimal</div>
+        <div class="question">Q5. Convert (DEAD)₁₆ to Decimal</div>
+    </div>
+
+    <h3>4.2 Hexadecimal to Binary Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> Convert each hexadecimal digit to its 4-bit binary equivalent.
+    </div>
+
+    <div class="important">
+        Quick Reference: 0→0000, 1→0001, 2→0010, 3→0011, 4→0100, 5→0101, 6→0110, 7→0111<br>
+        8→1000, 9→1001, A→1010, B→1011, C→1100, D→1101, E→1110, F→1111
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (3D)₁₆ to Binary</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> Convert each digit separately:</div>
+            <div class="step">3 = <code>0011</code></div>
+            <div class="step">D (13) = <code>1101</code></div>
+            <div class="step"><strong>Step 2:</strong> Combine: <code>00111101</code></div>
+            <div class="formula">Answer: (3D)₁₆ = (00111101)₂</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 2: Convert (A5F)₁₆ to Binary</div>
+        <div class="steps">
+            <div class="step">A (10) = <code>1010</code></div>
+            <div class="step">5 = <code>0101</code></div>
+            <div class="step">F (15) = <code>1111</code></div>
+            <div class="step">Combine: <code>101001011111</code></div>
+            <div class="formula">Answer: (A5F)₁₆ = (101001011111)₂</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Hexadecimal to Binary</div>
+        <div class="question">Q1. Convert (7E)₁₆ to Binary</div>
+        <div class="question">Q2. Convert (B9)₁₆ to Binary</div>
+        <div class="question">Q3. Convert (FAB)₁₆ to Binary</div>
+        <div class="question">Q4. Convert (DEAD)₁₆ to Binary</div>
+        <div class="question">Q5. Convert (C0DE)₁₆ to Binary</div>
+    </div>
+
+    <h3>4.3 Hexadecimal to Octal Conversion</h3>
+    
+    <div class="note">
+        <strong>Method:</strong> First convert Hexadecimal → Binary, then Binary → Octal.
+    </div>
+
+    <div class="example">
+        <div class="example-title">Example 1: Convert (2E)₁₆ to Octal</div>
+        <div class="steps">
+            <div class="step"><strong>Step 1:</strong> Hex to Binary:</div>
+            <div class="step">2 = 0010, E = 1110 → <code>00101110</code></div>
+            <div class="step"><strong>Step 2:</strong> Binary to Octal (group by 3):</div>
+            <div class="step"><code>000 | 101 | 110</code></div>
+            <div class="step">000 = <strong>0</strong>, 101 = <strong>5</strong>, 110 = <strong>6</strong></div>
+            <div class="formula">Answer: (2E)₁₆ = (056)₈ or (56)₈</div>
+        </div>
+    </div>
+
+    <div class="practice">
+        <div class="practice-title">📝 PRACTICE QUESTIONS - Hexadecimal to Octal</div>
+        <div class="question">Q1. Convert (FF)₁₆ to Octal</div>
+        <div class="question">Q2. Convert (AB)₁₆ to Octal</div>
+        <div class="question">Q3. Convert (1C8)₁₆ to Octal</div>
+        <div class="question">Q4. Convert (BCD)₁₆ to Octal</div>
+        <div class="question">Q5. Convert (FED)₁₆ to Octal</div>
+    </div>
+
+
+   <h2>PART 5: QUICK CONVERSION SUMMARY</h2>
+
+    <table style="margin: 20px 0;">
+        <tr>
+            <th>From → To</th>
+            <th>Method</th>
+        </tr>
+        <tr>
+            <td><strong>Decimal → Binary</strong></td>
+            <td>Divide by 2, write remainders bottom to top</td>
+        </tr>
+        <tr>
+            <td><strong>Decimal → Octal</strong></td>
+            <td>Divide by 8, write remainders bottom to top</td>
+        </tr>
+        <tr>
+            <td><strong>Decimal → Hex</strong></td>
+            <td>Divide by 16, write remainders bottom to top</td>
+        </tr>
+        <tr>
+            <td><strong>Binary → Decimal</strong></td>
+            <td>Multiply by powers of 2 and add</td>
+        </tr>
+        <tr>
+            <td><strong>Binary → Octal</strong></td>
+            <td>Group by 3 bits (from right)</td>
+        </tr>
+        <tr>
+            <td><strong>Binary → Hex</strong></td>
+            <td>Group by 4 bits (from right)</td>
+        </tr>
+        <tr>
+            <td><strong>Octal → Decimal</strong></td>
+            <td>Multiply by powers of 8 and add</td>
+        </tr>
+        <tr>
+            <td><strong>Octal → Binary</strong></td>
+            <td>Each digit → 3 bits</td>
+        </tr>
+        <tr>
+            <td><strong>Octal → Hex</strong></td>
+            <td>Octal → Binary → Hex</td>
+        </tr>
+        <tr>
+            <td><strong>Hex → Decimal</strong></td>
+            <td>Multiply by powers of 16 and add</td>
+        </tr>
+        <tr>
+            <td><strong>Hex → Binary</strong></td>
+            <td>Each digit → 4 bits</td>
+        </tr>
+        <tr>
+            <td><strong>Hex → Octal</strong></td>
+            <td>Hex → Binary → Octal</td>
+        </tr>
+    </table>
+
+    <h2>PART 6: IMPORTANT TIPS FOR EXAMINATION</h2>
+
+    <div class="important">
+        ✓ Always write the base in subscript: (25)₁₀, (1101)₂, (345)₈, (2AF)₁₆<br>
+        ✓ Show all steps clearly - marks are given for method!<br>
+        ✓ For Binary → Octal: Group by 3 from RIGHT to LEFT<br>
+        ✓ For Binary → Hex: Group by 4 from RIGHT to LEFT<br>
+        ✓ Remember: A=10, B=11, C=12, D=13, E=14, F=15 in Hexadecimal<br>
+        ✓ Double-check your answer by converting back<br>
+        ✓ Write remainders clearly when dividing<br>
+        ✓ Don't forget to add leading zeros when grouping binary digits
+    </div>
+
+    <h2>PART 7: CHALLENGE QUESTIONS (MIXED PRACTICE)</h2>
+
+    <div class="practice">
+        <div class="practice-title">📝 ADVANCED PRACTICE QUESTIONS</div>
+        <div class="question">Q1. Convert (1010101)₂ to Decimal, Octal, and Hexadecimal</div>
+        <div class="question">Q2. Convert (777)₈ to Binary and Hexadecimal</div>
+        <div class="question">Q3. Convert (1FF)₁₆ to Binary and Octal</div>
+        <div class="question">Q4. Which is larger: (1000)₂ or (10)₈ or (8)₁₀?</div>
+        <div class="question">Q5. Convert (2024)₁₀ to all three bases (Binary, Octal, Hex)</div>
+        <div class="question">Q6. What is (FF)₁₆ + (11)₈ in Decimal?</div>
+        <div class="question">Q7. Convert (11011011)₂ to Octal and Hexadecimal</div>
+        <div class="question">Q8. Find the decimal equivalent of (ABC)₁₆</div>
+        <div class="question">Q9. What is the binary equivalent of (256)₁₀?</div>
+        <div class="question">Q10. Convert (6543)₈ to Hexadecimal</div>
+    </div>
+
+    <div class="note" style="margin-top: 30px;">
+        <strong>Remember Students!</strong><br>
+        "Success comes to those who work hard and stay consistent!"<br>
+        Practice these conversions daily for 15-20 minutes.<br>
+        Master each section before moving to the next.<br>
+        <strong>All the best for your examinations! 📚✨</strong>
+    </div>
+
+    <div class="footer">
+        <strong>Study Smart • Work Hard • Stay Focused</strong><br>
+        Number Systems Reference Guide | Complete with Step-by-Step Solutions
+    </div>
+</body>
+</html>

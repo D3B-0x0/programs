@@ -1,65 +1,43 @@
-// Calculator program
+// Simple Linux calculator for beginners
 
 #include <iostream>
-#include <iomanip>
-#include <string>
-#include <algorithm>
-#include <limits>
 
 using namespace std;
 
 int main() {
-  cout << "Simple calculator - enter operation (+ - * /) or words (add, sub, mul, div). Type q or quit to exit.\n";
+  cout << "🐧 Linux Calculator - Enter two numbers and an operation\n";
+  cout << "Operations: + (add), - (subtract), * (multiply), / (divide)\n";
+  cout << "Type 'q' to quit\n\n";
+
+  double num1, num2;
+  char op;
 
   while (true) {
-    string op;
-    cout << "\nOperation: ";
-    if (!(cin >> op)) break;
-    // normalize
-    transform(op.begin(), op.end(), op.begin(), [](unsigned char c){ return tolower(c); });
-    if (op == "q" || op == "quit" || op == "exit") break;
+    cout << "First number (or q to quit): ";
+    if (!(cin >> num1)) break;
 
-    // map word forms to single-char ops
-    if (op == "add" || op == "plus") op = "+";
-    else if (op == "sub" || op == "subtract" || op == "minus") op = "-";
-    else if (op == "mul" || op == "multiply" || op == "times") op = "*";
-    else if (op == "div" || op == "divide") op = "/";
+    cout << "Operation (+ - * /): ";
+    cin >> op;
+    if (op == 'q') break;
 
-    char operation = op.empty() ? '?' : op[0];
-    if (operation != '+' && operation != '-' && operation != '*' && operation != '/') {
-      cout << "Invalid operation. Try + - * / or words like add, sub, mul, div.\n";
-      continue;
-    }
-
-    double a = 0.0, b = 0.0;
-    cout << "First number: ";
-    if (!(cin >> a)) {
-      cout << "Invalid number input. Try again.\n";
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      continue;
-    }
     cout << "Second number: ";
-    if (!(cin >> b)) {
-      cout << "Invalid number input. Try again.\n";
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      continue;
-    }
+    if (!(cin >> num2)) break;
 
-    cout << fixed << setprecision(10);
-    switch (operation) {
-      case '+': cout << "Result: " << (a + b) << '\n'; break;
-      case '-': cout << "Result: " << (a - b) << '\n'; break;
-      case '*': cout << "Result: " << (a * b) << '\n'; break;
-      case '/':
-        if (b == 0.0) cout << "Error: Division by zero!\n";
-        else cout << "Result: " << (a / b) << '\n';
+    cout << "Result: ";
+    switch (op) {
+      case '+': cout << num1 << " + " << num2 << " = " << (num1 + num2) << "\n"; break;
+      case '-': cout << num1 << " - " << num2 << " = " << (num1 - num2) << "\n"; break;
+      case '*': cout << num1 << " * " << num2 << " = " << (num1 * num2) << "\n"; break;
+      case '/': 
+        if (num2 == 0) cout << "Cannot divide by zero!\n";
+        else cout << num1 << " / " << num2 << " = " << (num1 / num2) << "\n";
         break;
+      default: cout << "Invalid operation!\n";
     }
+    cout << "\n";
   }
 
-  cout << "Goodbye.\n";
+  cout << "Happy coding! 🚀\n";
   return 0;
 }
 

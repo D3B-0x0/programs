@@ -1,10 +1,10 @@
-// hmm starting cpp finally
-//
+// Copyright (c) 2026 Author. All Rights Reserved.
+
 #include <iostream>
 
-int main () {
-  std::cout <<"hello niggesh" << std::endl;
-  std::cout <<"hello bruh" << std::endl;
-
-  return 0;
+int main() {
+  std::string NAME;
+  std::cout << "Hello pls input your name:- ";
+  std::getline(std::cin >> std::ws, NAME);
+  std::cout << "Hello nigga your name is " << NAME << std::endl; 
 }
